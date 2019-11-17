@@ -44,14 +44,33 @@ export default class Calendar extends Component {
     const m = this.props.moment;
     const d = m.date();
     const d1 = m.clone().subtract(1, 'month').endOf('month').date();
-    const d2 = m.clone().date(1).day();
+    let d2 = m.clone().date(1).day();
     const d3 = m.clone().endOf('month').date();
-    const days = [].concat(
-      range(d1 - d2 + 1, d1 + 1),
-      range(1, d3 + 1),
-      range(1, 42 - d3 - d2 + 1)
-    );
-    const weeks = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    
+    // get short names for weekdays in current locale, example:
+    //   ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+    var weeks = moment.weekdaysShort();
+    
+    // check if week starts with Monday
+    if (moment.localeData().firstDayOfWeek() == 1) {
+      // swap sunday with monday (weekday names)
+      weeks.push(weeks.shift());
+      if (d2 == 0)
+      d2 = 7; // convert to ISO day of the week (1..7)
+      var days = [].concat(
+        range(d1-d2+2, d1+1),
+        range(1, d3+1),
+        range(1, 42-d3-d2+2)
+        );
+    } else {
+      var days = [].concat(
+        range(d1-d2+1, d1+1),
+        range(1, d3+1),
+        range(1, 42-d3-d2+1)
+        );
+      }
+        
+    
 
     return (
       <div className={cx('m-calendar', this.props.className)}>
