@@ -3,7 +3,7 @@ import './app.less';
 import moment from 'moment';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import InputMoment from '../src/input-moment';
+import InputMomentEs from '../src/input-moment-es';
 import packageJson from '../package.json';
 
 class App extends Component {
@@ -30,7 +30,7 @@ class App extends Component {
           <div className="input">
             <input type="text" value={this.state.m.format('llll')} readOnly />
           </div>
-          <InputMoment
+          <InputMomentEs
             moment={this.state.m}
             onChange={this.handleChange}
             minStep={5}

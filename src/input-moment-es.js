@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import Calendar from './calendar';
 import Time from './time';
 
-export default class InputMoment extends Component {
+export default class InputMomentEs extends Component {
   static defaultProps = {
     prevMonthIcon: 'ion-ios-arrow-left',
     nextMonthIcon: 'ion-ios-arrow-right',

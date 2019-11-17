@@ -6,16 +6,12 @@
   "scripts": {
     "start": "webpack-dev-server -c --port=8080",
     "build-js": "rm -rf lib && babel src --out-dir lib && webpack -p",
-    "build-css": "lessc --clean-css src/less/input-moment.less dist/input-moment.css",
+    "build-css": "lessc --clean-css src/less/input-moment-es.less dist/input-moment-es.css",
     "build": "npm run build-js && npm run build-css",
-    "deploy": "rm -rf .publish && npm run build && github-pages-deploy",
+    "deploy": "rm -rf .publish && npm run build",
     "pretest": "npm run build",
     "test": "jest",
-    "prepublish": "npm test",
     "clean": "rm dist/* && rm example/bundle*"
-  },
-  "github-pages-deploy": {
-    "src": "example"
   },
   "author": "Borja Mazo",
   "license": "ISC",
@@ -33,7 +29,6 @@
     "babel-preset-react": "^6.1.2",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.21.0",
-    "github-pages-deploy": "0.0.3",
     "jest": "^19.0.2",
     "json-loader": "^0.5.4",
     "less": "^2.5.3",
@@ -48,6 +43,7 @@
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "classnames": "^2.2.0",
     "lodash": "^4.17.4",
     "react-input-slider": "^4.0.0"
