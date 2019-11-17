@@ -1,6 +1,6 @@
 {
-  "name": "input-moment",
-  "version": "0.0.1",
+  "name": "input-moment-es",
+  "version": "0.0.2",
   "description": "React datetime picker powered by momentjs",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   "github-pages-deploy": {
     "src": "example"
   },
-  "author": "Wang Zuo",
+  "author": "Borja Mazo",
   "license": "ISC",
   "peerDependencies": {
     "moment": "^2.10.6",
