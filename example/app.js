@@ -1,4 +1,4 @@
-import '../src/less/input-moment.less';
+import '../src/less/input-moment-es.less';
 import './app.less';
 import moment from 'moment';
 import React, { Component } from 'react';
