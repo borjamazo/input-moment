@@ -31,7 +31,7 @@ http://wangzuo.github.io/input-moment
   nextMonthIcon="ion-ios-arrow-right" // default
 />
 ```
-Check [app.js](https://github.com/wangzuo/input-moment/blob/master/example/app.js) for a working example.
+Check [app.js](https://github.com/borjamazo/input-moment/blob/master/example/app.js) for a working example.
 
 ### Development
 - npm install
