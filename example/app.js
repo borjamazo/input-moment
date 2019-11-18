@@ -20,6 +20,13 @@ class App extends Component {
   };
 
   render() {
+
+    moment.locale('es', {
+      week: {
+          dow: 1
+      }
+  });
+
     return (
       <div className="app">
         <h1>

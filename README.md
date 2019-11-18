@@ -21,7 +21,7 @@ http://borjamazo.github.io/input-moment
 
 ### Usage
 ``` javascript
-<InputMoment
+<InputMomentEs
   moment={this.state.moment}
   onChange={this.handleChange}
   onSave={this.handleSave}
